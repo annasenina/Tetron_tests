@@ -1,7 +1,5 @@
 # Автотесты на проект https://www.tetron.ru/
 
-# Автотесты на проект https://multibonus.ru/
-
 ## Используемые технологии:
 Тесты: Java, Gradle, Junit5, Selenide
 
