@@ -39,6 +39,6 @@ Task Tracker: Jira
 ![Jira]()
 
 ## После прогона тестов приходит сообщение от бота в Telegram
-Ссылка на чат, куда приходят уведомления: https://t.me/joinchat/t-njfKZ-yNI4ODcy
+Ссылка на чат, куда приходят уведомления: https://t.me/joinchat/X76tUcthckFlZTIy
 ![Telegram]()
 
