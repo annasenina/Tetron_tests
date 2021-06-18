@@ -2,9 +2,12 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.CallBackOrderFormPage;
+import pages.MainPage;
 
 import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.*;
@@ -14,86 +17,76 @@ import static io.qameta.allure.Allure.step;
 
 public class CallbackFormTests extends TestBase{
 
+    final MainPage mainPage = new MainPage();
+    final CallBackOrderFormPage callBackForm = new CallBackOrderFormPage();
+
     @Test
     @Tag("web")
+    @Feature("Форма \"Заказать звонок\"")
     @AllureId("3154")
     @DisplayName("При нажатии на кнопку \"Заказать звонок\" открывается форма \"Заказать звонок\"")
     void canOpenCallbackFormTest()
     {
-        step ("Открываем главную страницу", ()-> open(""));
+        mainPage.openMainPage();
+        mainPage.clickOrderCallBackButton();
 
-        //$(".top_block").find(byText("Заказать звонок")).click();
-        step ("Нажимаем на кнопку \"Заказать звонок\"", ()-> $(byAttribute("data-popup","js_orerd_popup")).click());
-
-        step ("Открывается форма с заголовком \"Заказать звонок\"", ()-> {
-                    $$(".content_popup").first().shouldBe(visible);
-                    $$(".content_popup").first().shouldHave(text("Заказать звонок"));
-                });
-        step ("На форме есть поля \"Ваше имя\" и \"Телефон\"", ()-> {
-
-                    $$(".content_popup").first().shouldHave(text("Ваше имя"));
-                    $$(".content_popup").first().shouldHave(text("Телефон"));
-        });
-        sleep(5000);
+        callBackForm.checkFormOpened();
+        callBackForm.formHasNameAndPhoneField();
     }
 
     @Test
     @Tag("web")
-    //@AllureId("3154")
+    @AllureId("3158")
     @DisplayName("Форму \"Заказать звонок\" можно закрыть")
     void canCloseCallbackFormTest() {
-        step ("Открываем главную страницу", ()-> open(""));
+        mainPage.openMainPage();
+        mainPage.clickOrderCallBackButton();
 
-        step ("Нажимаем на кнопку \"Заказать звонок\"");
-
-        step ("Нажимаем на крестик");
-
-        step ("Форма закрывается");
+        callBackForm.clickCloseForm();
+        callBackForm.checkFormClosed();
     }
 
     @Test
     @Tag("web")
-    //@AllureId("3154")
+    @AllureId("3155")
     @DisplayName("Поле \"Ваше имя\" обязательно к заполнению")
     void nameMustBeCompletedTest() {
-        step ("Открываем главную страницу", ()-> open(""));
+        mainPage.openMainPage();
+        mainPage.clickOrderCallBackButton();
 
-        step ("Нажимаем на кнопку \"Заказать звонок\"");
+        callBackForm.fillPhone("1234567890");
+        callBackForm.clickSubmitButton();
 
-        step ("Заполняем поле \"Телефон\"");
-
-        step ("Нажимаем кнопку \"Отправить\"");
+        callBackForm.checkNameFieldIsRed();
     }
 
     @Test
     @Tag("web")
-    //@AllureId("3154")
+    @AllureId("3156")
     @DisplayName("Поле \"Телефон\" обязательно к заполнению")
     void phoneMustBeCompletedTest() {
-        step ("Открываем главную страницу", ()-> open(""));
+        mainPage.openMainPage();
+        mainPage.clickOrderCallBackButton();
 
-        step ("Нажимаем на кнопку \"Заказать звонок\"");
+        callBackForm.fillName("Иванов Иван");
+        callBackForm.clickSubmitButton();
 
-        step ("Заполняем поле \"Ваше имя\"");
-
-        step ("Нажимаем кнопку \"Отправить\"");
+        callBackForm.checkPhoneFieldIsRed();
     }
 
     @Test
     @Tag("web")
-    //@AllureId("3154")
+    @AllureId("3157")
     @DisplayName("Можно отправить заявку на обратный звонок")
     void userCanSendOrderToCallBackTest() {
-        step ("Открываем главную страницу", ()-> open(""));
+        mainPage.openMainPage();
+        mainPage.clickOrderCallBackButton();
 
-        step ("Нажимаем на кнопку \"Заказать звонок\"");
+        callBackForm.fillPhone("1234567890");
+        callBackForm.fillName("Иванов Иван");
 
-        step ("Заполняем поле \"Ваше имя\"");
-        step ("Заполняем поле \"Телефон\"");
-
-        step ("Нажимаем кнопку \"Отправить\"");
-
-        step ("Форма закрывается");
+        callBackForm.clickSubmitButton();
+        callBackForm.checkFormClosed();
 
         step ("ToDo Проверяем в БД, что данные пользователя сохранились");
 

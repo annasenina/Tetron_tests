@@ -10,7 +10,6 @@ import static helpers.AttachmentsHelper.attachVideo;
 import static helpers.DriverHelper.*;
 
 public class TestBase {
-    // GoogleAuthPage googleAuthPage = new GoogleAuthPage();
 
     @BeforeAll
     public static void beforeAll() {
