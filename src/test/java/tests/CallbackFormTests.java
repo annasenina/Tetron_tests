@@ -88,6 +88,8 @@ public class CallbackFormTests extends TestBase{
         callBackForm.clickSubmitButton();
         callBackForm.checkFormClosed();
 
+        sleep(5000);
+
         step ("ToDo Проверяем в БД, что данные пользователя сохранились");
 
     }
