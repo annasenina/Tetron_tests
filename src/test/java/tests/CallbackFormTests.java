@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 import static io.qameta.allure.Allure.step;
 
-
+@Feature("Форма \"Заказать звонок\"")
 public class CallbackFormTests extends TestBase{
 
     final MainPage mainPage = new MainPage();
@@ -22,7 +22,6 @@ public class CallbackFormTests extends TestBase{
 
     @Test
     @Tag("web")
-    @Feature("Форма \"Заказать звонок\"")
     @AllureId("3154")
     @DisplayName("При нажатии на кнопку \"Заказать звонок\" открывается форма \"Заказать звонок\"")
     void canOpenCallbackFormTest()
