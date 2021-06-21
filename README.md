@@ -1,4 +1,4 @@
-# Автотесты на проект https://www.tetron.ru/
+# Автотесты на форму Заказать звонок https://www.tetron.ru/
 
 ## Используемые технологии:
 **Тесты:** Java, Gradle, Junit5, Selenide
@@ -15,7 +15,7 @@
 
 **Task Tracker:** Jira
 
-## Реализованы проверки главной страницы
+## Реализованы проверки формы Заказть звонок
 - [X] - 
 - [X] - 
 - [X] - 
@@ -30,7 +30,7 @@
 ![AllureTO](src/test/resources/files/AllureTestOps.png)
 
 ## Добавлено видео о прохождении тестов
-![Video]()
+![Video](src/test/resources/files/video.png)
 
 ## Добавлен отчёт Allure
 [Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/16/allure/) на отчет
