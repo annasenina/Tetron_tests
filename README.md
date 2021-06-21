@@ -30,7 +30,7 @@
 ![AllureTO](src/test/resources/files/AllureTestOps.png)
 
 ## Добавлено видео о прохождении тестов
-![Video](src/test/resources/files/video.png)
+![Video](src/test/resources/files/video.gif)
 
 ## Добавлен отчёт Allure
 [Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/16/allure/) на отчет
