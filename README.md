@@ -16,11 +16,11 @@
 **Task Tracker:** Jira
 
 ## Реализованы проверки формы Заказть звонок
-- [X] - 
-- [X] - 
-- [X] - 
-- [X] - 
-- [X] - 
+- [X] - При нажатии на кнопку "Заказать звонок" открывается форма "Заказать звонок"
+- [X] - Поле "Ваше имя" обязательно к заполнению
+- [X] - Поле "Телефон" обязательно к заполнению
+- [X] - Форму "Заказать звонок" можно закрыть
+- [X] - Можно отправить заявку на обратный звонок
 
 ## Запуск тестов происходит в Jenkins
 [Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/) на джобу в Jenkins: 
@@ -30,7 +30,7 @@
 ![AllureTO](src/test/resources/files/AllureTestOps.png)
 
 ## Добавлено видео о прохождении тестов
-![Video](src/test/resources/files/video.gif)
+![Video](src/test/resources/files/Video.gif)
 
 ## Добавлен отчёт Allure
 [Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/16/allure/) на отчет
