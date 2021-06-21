@@ -1,19 +1,19 @@
 # Автотесты на проект https://www.tetron.ru/
 
 ## Используемые технологии:
-Тесты: Java, Gradle, Junit5, Selenide
+**Тесты:** Java, Gradle, Junit5, Selenide
 
-Отчетность: Allure Reports
+**Отчетность:** Allure Reports
 
-CI: Jenkins
+**CI:** Jenkins
 
-TMS: Allure TestOps
+**TMS:** Allure TestOps
 
-Запуск тестов: Selenoid
+**Запуск тестов:** Selenoid
  
-Уведомление: Telegram Bot
+**Уведомление:** Telegram Bot
 
-Task Tracker: Jira
+**Task Tracker:** Jira
 
 ## Реализованы проверки главной страницы
 - [X] - 
@@ -23,22 +23,23 @@ Task Tracker: Jira
 - [X] - 
 
 ## Запуск тестов происходит в Jenkins
-Ссылка на джобу в Jenkins: 
+[Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/) на джобу в Jenkins: 
 ![Jenkins](src/test/resources/files/Jenkins.png)
 
 ## Управление тестами в AllureTestOps
-![AllureTO]()
+![AllureTO](src/test/resources/files/AllureTestOps.png)
 
 ## Добавлено видео о прохождении тестов
 ![Video]()
 
 ## Добавлен отчёт Allure
-![Allure]()
+[Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/16/allure/) на отчет
+![Allure](src/test/resources/files/AllureReport.png)
 
 ## Реализована связь прохождение тестов с задачей в Jira
-![Jira]()
+![Jira](src/test/resources/files/Jira.png)
 
 ## После прогона тестов приходит сообщение от бота в Telegram
-Ссылка на чат, куда приходят уведомления: https://t.me/joinchat/X76tUcthckFlZTIy
-![Telegram]()
+[Ссылка](https://t.me/joinchat/X76tUcthckFlZTIy) на чат, куда приходят уведомления 
+![Telegram](src/test/resources/files/Telegram.png)
 
