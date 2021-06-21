@@ -26,13 +26,13 @@
 [Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/) на джобу в Jenkins: 
 ![Jenkins](src/test/resources/files/Jenkins.png)
 
-## Управление тестами в AllureTestOps
+## Управление тестами и прогонами в AllureTestOps
 ![AllureTO](src/test/resources/files/AllureTestOps.png)
 
-## Добавлено видео о прохождении тестов
+## Видео прохождения тестов прикладывается к прогону в AllureTestOps
 ![Video](src/test/resources/files/Video.gif)
 
-## Добавлен отчёт Allure
+## Отчёт о прогоне в AllureReport
 [Ссылка](https://jenkins.autotests.cloud/job/C4-Senina-TetronTests/16/allure/) на отчет
 ![Allure](src/test/resources/files/AllureReport.png)
 
